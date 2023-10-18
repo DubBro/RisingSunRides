@@ -15,6 +15,9 @@
                 .IsFixedLength()
                 .IsRequired();
 
+            builder.HasIndex(u => u.VIN)
+                .IsUnique();
+
             builder.Property(c => c.Year)
                 .IsRequired();
 

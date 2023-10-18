@@ -19,9 +19,15 @@
                 .IsFixedLength()
                 .IsRequired();
 
+            builder.HasIndex(u => u.Phone)
+                .IsUnique();
+
             builder.Property(u => u.Email)
                 .HasMaxLength(255)
                 .IsRequired(false);
+
+            builder.HasIndex(u => u.Email)
+                .IsUnique();
 
             builder.Property(u => u.Password)
                 .HasMaxLength(255)
