@@ -7,7 +7,7 @@
             builder.HasKey(t => t.Id);
 
             builder.Property(t => t.Id)
-                .UseHiLo("transmission_hilo")
+                .UseIdentityColumn()
                 .IsRequired();
 
             builder.Property(t => t.Name)

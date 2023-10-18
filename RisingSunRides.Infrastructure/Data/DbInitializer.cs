@@ -225,8 +225,6 @@
                 {
                     Price = 50000,
                     City = "Lviv",
-                    CreatedOnDate = DateTime.UtcNow,
-                    LastModifiedOnDate = DateTime.UtcNow,
                     UserId = 2,
                     CarId = 1,
                 },
@@ -234,8 +232,6 @@
                 {
                     Price = 40000,
                     City = "Kyiv",
-                    CreatedOnDate = DateTime.UtcNow,
-                    LastModifiedOnDate = DateTime.UtcNow,
                     UserId = 2,
                     CarId = 2,
                 },
@@ -243,8 +239,6 @@
                 {
                     Price = 74000,
                     City = "Kyiv",
-                    CreatedOnDate = DateTime.UtcNow,
-                    LastModifiedOnDate = DateTime.UtcNow,
                     UserId = 2,
                     CarId = 3,
                 },

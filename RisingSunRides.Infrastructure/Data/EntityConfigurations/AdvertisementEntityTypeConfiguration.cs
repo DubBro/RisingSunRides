@@ -7,7 +7,7 @@
             builder.HasKey(a => a.Id);
 
             builder.Property(a => a.Id)
-                .UseHiLo("advertisement_hilo")
+                .UseIdentityColumn()
                 .IsRequired();
 
             builder.Property(a => a.Description)
@@ -23,9 +23,11 @@
                 .IsRequired();
 
             builder.Property(a => a.CreatedOnDate)
+                .HasDefaultValueSql("GETDATE()")
                 .IsRequired();
 
             builder.Property(a => a.LastModifiedOnDate)
+                .HasDefaultValueSql("GETDATE()")
                 .IsRequired();
 
             builder.HasOne(a => a.Owner)

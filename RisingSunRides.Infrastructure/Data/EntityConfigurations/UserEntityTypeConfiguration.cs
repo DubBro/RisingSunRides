@@ -7,7 +7,7 @@
             builder.HasKey(u => u.Id);
 
             builder.Property(u => u.Id)
-                .UseHiLo("user_hilo")
+                .UseIdentityColumn()
                 .IsRequired();
 
             builder.Property(u => u.Name)

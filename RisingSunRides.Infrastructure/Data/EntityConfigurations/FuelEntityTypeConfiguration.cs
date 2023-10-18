@@ -7,7 +7,7 @@
             builder.HasKey(f => f.Id);
 
             builder.Property(f => f.Id)
-                .UseHiLo("fuel_hilo")
+                .UseIdentityColumn()
                 .IsRequired();
 
             builder.Property(f => f.Name)

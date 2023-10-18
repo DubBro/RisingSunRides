@@ -7,7 +7,7 @@
             builder.HasKey(d => d.Id);
 
             builder.Property(d => d.Id)
-                .UseHiLo("drivetrain_hilo")
+                .UseIdentityColumn()
                 .IsRequired();
 
             builder.Property(d => d.Name)
