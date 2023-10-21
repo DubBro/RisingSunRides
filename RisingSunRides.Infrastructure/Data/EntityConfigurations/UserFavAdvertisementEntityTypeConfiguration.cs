@@ -4,6 +4,8 @@
     {
         public void Configure(EntityTypeBuilder<UserFavAdvertisement> builder)
         {
+            builder.ToTable(nameof(UserFavAdvertisement));
+
             builder.HasKey(fv => new { fv.UserId, fv.AdvertisementId });
 
             builder.HasOne(fv => fv.User)

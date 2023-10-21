@@ -4,6 +4,8 @@
     {
         public void Configure(EntityTypeBuilder<Fuel> builder)
         {
+            builder.ToTable(nameof(Fuel));
+
             builder.HasKey(f => f.Id);
 
             builder.Property(f => f.Id)

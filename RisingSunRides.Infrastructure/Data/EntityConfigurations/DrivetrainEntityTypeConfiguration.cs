@@ -4,6 +4,8 @@
     {
         public void Configure(EntityTypeBuilder<Drivetrain> builder)
         {
+            builder.ToTable(nameof(Drivetrain));
+
             builder.HasKey(d => d.Id);
 
             builder.Property(d => d.Id)
