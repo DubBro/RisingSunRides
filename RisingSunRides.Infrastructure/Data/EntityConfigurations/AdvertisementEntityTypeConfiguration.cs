@@ -4,6 +4,8 @@
     {
         public void Configure(EntityTypeBuilder<Advertisement> builder)
         {
+            builder.ToTable(nameof(Advertisement));
+
             builder.HasKey(a => a.Id);
 
             builder.Property(a => a.Id)

@@ -4,6 +4,8 @@
     {
         public void Configure(EntityTypeBuilder<Transmission> builder)
         {
+            builder.ToTable(nameof(Transmission));
+
             builder.HasKey(t => t.Id);
 
             builder.Property(t => t.Id)

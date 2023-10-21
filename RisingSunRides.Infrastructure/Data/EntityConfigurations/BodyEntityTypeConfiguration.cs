@@ -4,6 +4,8 @@
     {
         public void Configure(EntityTypeBuilder<Body> builder)
         {
+            builder.ToTable(nameof(Body));
+
             builder.HasKey(b => b.Id);
 
             builder.Property(b => b.Id)
