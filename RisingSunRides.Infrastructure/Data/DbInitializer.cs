@@ -223,6 +223,7 @@
             {
                 new Advertisement()
                 {
+                    Name = "Mazda RX-7",
                     Price = 50000,
                     City = "Lviv",
                     UserId = 2,
@@ -230,6 +231,7 @@
                 },
                 new Advertisement()
                 {
+                    Name = "Nissan Silvia S15",
                     Price = 40000,
                     City = "Kyiv",
                     UserId = 2,
@@ -237,6 +239,7 @@
                 },
                 new Advertisement()
                 {
+                    Name = "Audi RS6",
                     Price = 74000,
                     City = "Kyiv",
                     UserId = 2,
