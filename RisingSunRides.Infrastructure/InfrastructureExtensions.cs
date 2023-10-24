@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using RisingSunRides.Infrastructure.Data;
 
 namespace RisingSunRides.Infrastructure
 {
@@ -9,7 +8,8 @@ namespace RisingSunRides.Infrastructure
     {
         public static void AddStorage(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("LocalDb")));
+            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(configuration["ConnectionString"]));
+            services.AddScoped<IApplicationDbContext, ApplicationDbContext>();
         }
 
         public static void CreateDbIfNotExists(this IApplicationBuilder applicationBuilder)
