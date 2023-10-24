@@ -2,6 +2,6 @@
 {
     public class Drivetrain : EntityBase
     {
-        public Car Car { get; set; } = null!;
+        public IList<Car> Cars { get; set; } = new List<Car>();
     }
 }
